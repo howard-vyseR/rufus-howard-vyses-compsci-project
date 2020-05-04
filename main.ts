@@ -22,6 +22,9 @@ namespace myTiles {
 scene.onOverlapTile(SpriteKind.Player, sprites.castle.tilePath3, function (sprite, location) {
     game.over(false)
 })
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    game.reset()
+})
 scene.onOverlapTile(SpriteKind.Player, sprites.castle.tileGrass2, function (sprite, location) {
     game.over(true)
 })
@@ -69,4 +72,4 @@ tiles.setTilemap(tiles.createTilemap(
         ))
 tiles.placeOnRandomTile(mySprite, sprites.builtin.forestTiles8)
 scene.cameraFollowSprite(mySprite)
-info.startCountdown(10)
+info.startCountdown(9)
